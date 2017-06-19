@@ -69,7 +69,7 @@ FUNCTION(SETUP_TARGET_FOR_COVERAGE _targetname _testrunner _outputname)
         message(FATAL_ERROR "genhtml required")
         endif()
 
-        set(coverage_info "${CMAKE_BINARY_DIR}/coverage.info")
+        set(coverage_info "${CMAKE_BINARY_DIR}/coverage_${_targetname}.info")
         set(coverage_cleaned "${coverage_info}.cleaned")
 
         separate_arguments(test_command UNIX_COMMAND "${_testrunner}")
